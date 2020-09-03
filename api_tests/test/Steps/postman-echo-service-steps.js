@@ -16,7 +16,7 @@ When('I set url to retrieve all cookies', function () {
     url + 'cookies'
 });
 
-When('I create a paramter to delete a specific cookie', function () {
+When('I create a parameter to delete a specific cookie', function () {
     cookieToBeRemoved = "cookie1=chocko";
 });
 
