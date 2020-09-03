@@ -33,7 +33,7 @@ Then('the set of cookies is retrieved', function () {
 });
 
 Then('the cookie is removed from the set', function () {
-    fetch(url + 'delete?' + cookieToBeRemoved)
+    fetch(url + 'cookies/delete?' + cookieToBeRemoved)
     .then(res => res.json())
     .then(json => console.log(json));
 });
