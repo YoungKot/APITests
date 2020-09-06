@@ -18,23 +18,26 @@ When('I set url to retrieve all cookies', function () {
 });
 
 When('I create a parameter to delete a specific cookie', function () {
-    paramsToBeRemoved = "cookie1=chocko";
+    paramsToBeRemoved = "cookie1";
 });
 
 Then('the cookies are set', function () {
-    fetch(fullUrl+ '/set?' + paramsToBePosted)
+    fetch(fullUrl + '/set?' + paramsToBePosted)
     .then(res => res.json())
-    .then(json => console.log(json));
+    .then(json => console.log(json))
+    .catch(err => console.error(err));
 });
 
 Then('the set of cookies is retrieved', function () {
     fetch(fullUrl)
     .then(res => res.json())
-    .then(json => console.log(json));
+    .then(json => console.log(json))
+    .catch(err => console.error(err));
 });
 
 Then('the cookie is removed from the set', function () {
     fetch(fullUrl + '/delete?' + paramsToBeRemoved)
     .then(res => res.json())
-    .then(json => console.log(json));
+    .then(json => console.log(json))
+    .catch(err => console.error(err));
 });
